@@ -35,10 +35,21 @@
             bottom: 2rem; /* Adjusted from 1rem to 2rem for more inner padding */
             left: 2rem; /* Adjusted from 1rem to 2rem for more inner padding */
         }
+        .absolute-bottom-right {
+            position: absolute;
+            bottom: 2rem; /* Adjusted from 1rem to 2rem for more inner padding */
+            right: 2rem; /* Adjusted from 1rem to 2rem for more inner padding */
+        }
     </style>
 </head>
 <body class="h-screen relative">
-    <h1 class="text-white text-6xl font-bold text-shadow absolute-top-left">aatame3</h1>
-    <p class="text-white text-2xl text-shadow absolute-bottom-left">キモ・オタク</p>
+    <h1 class="text-white text-4xl font-bold text-shadow absolute-top-left">aatame3</h1>
+    <p class="text-white text-2xl py-3 font-bold text-shadow absolute-bottom-left">キモ・オタク</p>
+    <button 
+        class="bg-slate-500 bg-opacity-50 bg-blur-sm hover:bg-slate-700 hover: bg-opacity-70 text-white font-bold p-3 rounded-full absolute-bottom-right"
+        type=“button” 
+        onclick="location.href='https://twitter.com/aatame3'">
+        <svg class="h-8 fill-white" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+    </button>
 </body>
 </html>
