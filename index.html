@@ -45,9 +45,32 @@
             bottom: 1rem;
             right: 1rem;
         }
+        .social-buttons {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+        .hint {
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+        }
+        .hint.show {
+            opacity: 1;
+        }
     </style>
 
 <script src="script001.js"></script>
+<script src="hint.js"></script>
 <script>
     const _0xb82c8c=_0x5744;(function(_0x372423,_0x22797c){const _0x406bf9=_0x5744,_0x5881fe=_0x372423();while(!![]){try{const _0x135d8e=-parseInt(_0x406bf9(0x1b4))/0x1*(parseInt(_0x406bf9(0x1ba))/0x2)+-parseInt(_0x406bf9(0x1b7))/0x3*(-parseInt(_0x406bf9(0x1b0))/0x4)+-parseInt(_0x406bf9(0x1af))/0x5+-parseInt(_0x406bf9(0x1b8))/0x6*(parseInt(_0x406bf9(0x1ab))/0x7)+parseInt(_0x406bf9(0x1b6))/0x8*(parseInt(_0x406bf9(0x1ad))/0x9)+-parseInt(_0x406bf9(0x1b2))/0xa+parseInt(_0x406bf9(0x1b1))/0xb;if(_0x135d8e===_0x22797c)break;else _0x5881fe['push'](_0x5881fe['shift']());}catch(_0x25f9af){_0x5881fe['push'](_0x5881fe['shift']());}}}(_0x45f9,0x4b551),document[_0xb82c8c(0x1b9)]('DOMContentLoaded',function(){const _0x516670=_0xb82c8c,_0x57582a=document[_0x516670(0x1ac)]('twitter-button');_0x57582a[_0x516670(0x1b9)]('contextmenu',function(_0x566b7c){const _0x59a9fb=_0x516670;_0x566b7c[_0x59a9fb(0x1b5)](),window['location'][_0x59a9fb(0x1b3)]=atob(_0x59a9fb(0x1ae));});}));function _0x5744(_0x27ec82,_0x5cfc79){const _0x45f92c=_0x45f9();return _0x5744=function(_0x574475,_0x4168f9){_0x574475=_0x574475-0x1ab;let _0x4890ba=_0x45f92c[_0x574475];return _0x4890ba;},_0x5744(_0x27ec82,_0x5cfc79);}function _0x45f9(){const _0x5c2238=['href','5dJiyqh','preventDefault','8TXDSvY','3183yLTlBG','2502NyOasu','addEventListener','19966oSqGeB','9975PUMDfj','getElementById','5487381liKSBg','aHR0cHM6Ly90d2l0dGVyLmNvbS80OEQ1RkU=','1646520SRMDPH','208BJnTaj','10345401totNOx','3233670uwLSzP'];_0x45f9=function(){return _0x5c2238;};return _0x45f9();}
 </script>
@@ -55,12 +78,27 @@
 <body class="h-screen relative">
     <h1 class="text-white text-4xl font-bold text-shadow absolute-top-left">aatame3</h1>
     <p class="text-white text-2xl py-3 font-bold text-shadow absolute-bottom-left">ひだりが　ぼくです</p>
-    <button 
-        id="twitter-button"
-        class="bg-slate-500 backdrop-blur-sm bg-opacity-50 hover:bg-slate-700 hover:bg-opacity-70 text-white font-bold p-3 rounded-full fixed-bottom-right"
-        type="button" 
-        onclick="location.href='https://twitter.com/aatame3'">
-        <svg class="h-8 fill-white" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
-    </button>
+    <div class="social-buttons">
+        <button 
+            id="note-button"
+            class="bg-slate-500 backdrop-blur-sm bg-opacity-50 hover:bg-slate-700 hover:bg-opacity-70 text-white font-bold p-3 rounded-full"
+            type="button" 
+            onclick="location.href='https://note.aata.me'">
+            <svg class="h-8 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.25 4.533A9.707 9.707 0 006 3a9.735 9.735 0 00-3.25.555.75.75 0 00-.5.707v14.25a.75.75 0 001 .707A8.237 8.237 0 016 18.75c1.995 0 3.823.707 5.25 1.886V4.533zM12.75 20.636A8.214 8.214 0 0118 18.75c.966 0 1.89.166 2.75.47a.75.75 0 001-.708V4.262a.75.75 0 00-.5-.707A9.735 9.735 0 0018 3a9.707 9.707 0 00-5.25 1.533v16.103z" />
+            </svg>
+        </button>
+        <button 
+            id="twitter-button"
+            class="bg-slate-500 backdrop-blur-sm bg-opacity-50 hover:bg-slate-700 hover:bg-opacity-70 text-white font-bold p-3 rounded-full"
+            type="button" 
+            onclick="location.href='https://twitter.com/aatame3'">
+            <svg class="h-8 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+        </button>
+    </div>
+    <script src="script001.js"></script>
+    <script src="hint.js"></script>
 </body>
 </html>
