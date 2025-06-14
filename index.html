@@ -53,7 +53,8 @@
             gap: 0.5rem;
         }
         .social-buttons button {
-            background: rgba(255, 255, 255, 0.10) !important;
+            background: rgba(255, 255, 255, 0.09) !important;
+            /* 透明度を高くするために0.09に変更 */
             backdrop-filter: blur(2px) saturate(140%) contrast(1.08);
             -webkit-backdrop-filter: blur(2px) saturate(140%) contrast(1.08);
             border: 1.5px solid rgba(255, 255, 255, 0.18);
@@ -84,11 +85,10 @@
             border-radius: inherit;
             pointer-events: none;
             z-index: 3;
-            border: 2px solid rgba(255,255,255,0.18); /* 明るめの白に調整 */
-            box-shadow: 0 0 12px 3px rgba(255,255,255,0.18) inset, 0 0 0 2px rgba(255,255,255,0.10); /* 白の内側シャドウを強調 */
-            opacity: 0.5;
-            /* ガラス反射のグラデーション */
-            background: linear-gradient(120deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.08) 40%, rgba(255,255,255,0) 70%);
+            border: 2px solid rgba(255,255,255,0.10);
+            box-shadow: 0 0 10px 2px rgba(255,255,255,0.10) inset, 0 0 0 1.5px rgba(255,255,255,0.07);
+            opacity: 0.28;
+            background: linear-gradient(120deg, rgba(255,255,255,0.13) 0%, rgba(255,255,255,0.04) 40%, rgba(255,255,255,0) 70%);
             mix-blend-mode: lighten;
         }
         .social-buttons button:hover {
